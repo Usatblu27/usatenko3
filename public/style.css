@@ -1,0 +1,215 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+#login-container,
+#rooms-container,
+#chat-container,
+#room-password-form,
+#create-room-form {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+#messages {
+  height: 400px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px 0;
+  background: white;
+}
+
+.message {
+  margin-bottom: 10px;
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+  position: relative;
+}
+
+.message.own-message {
+  background-color: #f0f8ff;
+}
+
+.username {
+  font-weight: bold;
+  color: blue;
+}
+
+.time {
+  color: #7f8c8d;
+  font-size: 0.8em;
+  margin-left: 10px;
+}
+
+.system-message {
+  color: #666;
+  text-align: center;
+  font-style: italic;
+  margin: 10px 0;
+}
+
+.input-area {
+  display: flex;
+  gap: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+  flex-grow: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+button {
+  padding: 8px 15px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: blue;
+}
+
+.room-item {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.room-item h3 {
+  margin: 0 0 5px 0;
+}
+
+.room-item p {
+  margin: 0 0 10px 0;
+  color: #666;
+}
+
+.join-room-btn {
+  background-color: #2ecc71;
+}
+
+.join-room-btn:hover {
+  background-color: #27ae60;
+}
+
+#create-room-btn {
+  background-color: #9b59b6;
+  margin-bottom: 15px;
+}
+
+#create-room-btn:hover {
+  background-color: #8e44ad;
+}
+
+.message-controls {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  display: none;
+}
+
+.message:hover .message-controls {
+  display: block;
+}
+
+.message-controls button {
+  padding: 2px 5px;
+  margin-left: 5px;
+  background: none;
+  color: #7f8c8d;
+  font-size: 12px;
+}
+
+.message-controls button:hover {
+  color: #3498db;
+  background: none;
+}
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.chat-header h2 {
+  margin: 0;
+  flex-grow: 1;
+  text-align: center;
+}
+
+#back-to-rooms {
+  background-color: #e74c3c;
+}
+
+#back-to-rooms:hover {
+  background-color: #c0392b;
+}
+
+#delete-room-form {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  width: 90%;
+  max-width: 400px;
+}
+
+#delete-room-form h2 {
+  color: #e74c3c;
+  margin-top: 0;
+}
+
+#delete-room-form p {
+  margin-bottom: 20px;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+#confirm-delete-room-btn {
+  background-color: #e74c3c;
+  flex-grow: 1;
+}
+
+#confirm-delete-room-btn:hover {
+  background-color: #c0392b;
+}
+
+#cancel-delete-room-btn {
+  background-color: #7f8c8d;
+  flex-grow: 1;
+}
+
+#cancel-delete-room-btn:hover {
+  background-color: #666;
+}
+
+#delete-room-btn {
+  background-color: #e74c3c;
+}
+
+#delete-room-btn:hover {
+  background-color: #c0392b;
+}

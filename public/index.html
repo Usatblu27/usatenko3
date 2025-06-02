@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat with Rooms</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="login-container">
+      <h1>Chat Login</h1>
+      <input type="text" id="username" placeholder="Your username" />
+      <button id="login-btn">Login</button>
+    </div>
+
+    <div id="rooms-container" style="display: none">
+      <h1>Choose a Room</h1>
+      <button id="create-room-btn">Create Room</button>
+      <div id="create-room-form" style="display: none">
+        <h2>Create New Room</h2>
+        <input type="text" id="room-name" placeholder="Room name" required />
+        <input
+          type="text"
+          id="room-desc"
+          placeholder="Description (optional)" />
+        <input
+          type="password"
+          id="room-password"
+          placeholder="Password (optional)" />
+        <button id="submit-room-btn">Create</button>
+      </div>
+      <div id="rooms-list"></div>
+    </div>
+
+    <div id="room-password-form" style="display: none">
+      <h2>Enter Room Password</h2>
+      <input
+        type="password"
+        id="room-password-check"
+        placeholder="Password"
+        required />
+      <button id="submit-password-btn">Enter</button>
+    </div>
+
+    <div id="chat-container" style="display: none">
+      <div class="chat-header">
+        <button id="back-to-rooms">← Back to Rooms</button>
+        <h2 id="current-room-title">Room Name</h2>
+        <button id="delete-room-btn" style="display: none">Delete Room</button>
+      </div>
+      <div id="messages"></div>
+      <div class="input-area">
+        <input type="text" id="message-input" placeholder="Your message" />
+        <button id="send-btn">Send</button>
+      </div>
+    </div>
+
+    <div id="delete-room-form" style="display: none">
+      <h2>Delete Room</h2>
+      <p>Are you sure you want to delete this room? This cannot be undone.</p>
+      <input
+        type="password"
+        id="delete-room-password"
+        placeholder="Room password"
+        required />
+      <div class="form-buttons">
+        <button id="confirm-delete-room-btn">Delete</button>
+        <button id="cancel-delete-room-btn">Cancel</button>
+      </div>
+    </div>
+
+    <script src="client.js"></script>
+  </body>
+</html>
